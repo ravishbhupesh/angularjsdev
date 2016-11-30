@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+		<script src="4.A.Directive.ngModel.js"></script>
+	</head>
+	<style>
+		input.ng-invalid {
+			background-color: lightblue;
+		}
+	</style>
+	<body>
+
+		<!--div data-ng-app="myApp" ng-controller="myCtrl">
+			Name: <input ng-model="name">
+			<h2>You entered : {{ name }} </h2>
+		</div-->
+		
+		<form ng-app="" name="myForm" ng-init="myText='post@myweb.com'">
+			Email : <input type="email" name="myEmailAddress" ng-model="myText" required>
+			<h1>Status</h1>
+			{{myForm.myEmailAddress.$valid}}
+			{{myForm.myEmailAddress.$dirty}}
+			{{myForm.myEmailAddress.$touched}}
+		</form>
+	</body>
+</html>

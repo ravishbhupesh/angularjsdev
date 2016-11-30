@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+		<script src="3.A.Modules.js"></script>
+	</head>
+	<body>
+
+		<div data-ng-app="myApp" data-ng-init="initialVar='Initialized on page load'" ng-controller="myCtrl">
+			First Name: <input type="text" data-ng-model="firstName"><br>
+			Last Name: <input type="text" data-ng-model="lastName"><br>
+			<br>
+			Full Name: {{firstName + " " + lastName}}
+		</div>
+	</body>
+</html>

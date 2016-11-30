@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+	</head>
+	<body>
+
+		<div data-ng-app="myApp" data-ng-init="initialVar='Initialized on page load'" ng-controller="myCtrl">
+			Info : {{ initialVar }} 
+			<br/>
+			Name : <input type="text" data-ng-model="name" />
+			<br/>
+			One way to write : {{ name }}
+			<br/>
+			Another way to write : <p data-ng-bind="name" ></p>
+			<br/>
+			This is how you write an expression : {{ 5 + 5 }}
+			<br/>
+			The following is loaded by controller.
+			<br/>
+			First Name: <input type="text" data-ng-model="firstName"><br>
+			Last Name: <input type="text" data-ng-model="lastName"><br>
+			<br>
+			Full Name: {{firstName + " " + lastName}}
+		</div>
+		
+		<script>
+			var app = angular.module('myApp', []);
+			app.controller('myCtrl', function($scope) {
+				$scope.firstName= "John";
+				$scope.lastName= "Doe";
+			});
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<body>
+
+		<div ng-app="" ng-init="myCol='lightblue';quantity=1;cost=5;person={firstName:'Angular',lastName:'JS'};weekdays=['Sun','Mon','Tue','Wed','Thur','Fri', 'Sat']">
+			<p>My first expression: {{ 5 + 5 }}</p>
+			<br/>
+			<input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+			<br/>
+			<p>Total in dollar: {{ quantity * cost }}</p>
+			<br/>
+			Object Initialized: {{ person.firstName }} {{ person.lastName }}
+			<br/>
+			Array Initialized
+			<ul>
+				<li data-ng-repeat="day in weekdays">{{ day }}</li>
+			</ul>
+		</div>
+
+	</body>
+</html>
