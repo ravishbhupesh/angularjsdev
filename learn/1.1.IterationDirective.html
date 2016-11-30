@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html data-ng-app="">
+	<head>
+		<title>AngularJS - Iterating using ng-repeat</title>
+	</head>
+	<body>
+		<div class="container" data-ng-init="weekdays=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']">
+			<h3>Days in Week</h3>
+			<ul>
+				<li data-ng-repeat="day in weekdays">{{ day }}</li>
+			</ul>
+		</div>
+		<script src="angular.min.js"></script>
+	</body>
+</html>

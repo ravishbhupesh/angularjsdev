@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html data-ng-app="">
+	<head>
+		<title>AngularJS - Using Filters</title>
+	</head>
+	<body>
+		<div class="container" data-ng-init="persons=[{name:'Bhupesh Ravish', city:'Kurukshetra'},{name:'Bhavna Ravish', city:'Rohtak'},{name:'Kusum Dhull', city:'Kaithal'}]">
+			Name: <input type="text" ng-model="name" />{{ name }} 
+			<br/>
+			<ul>
+				<li ng-repeat="person in persons | filter:name | orderBy:city">{{ person.name | uppercase }} - {{ person.city | lowercase}}</li>
+			</ul>
+			
+			<h4>Currency : {{ 1 | currency:"€" }}</h4>
+			<h4>Currency : {{ 1 | currency:"EUR" }}</h4>
+			<h4>Currency : {{ 1 | currency:"€":0 }}</h4>
+			
+		</div>
+		<script src="angular.min.js"></script>
+	</body>
+</html>
